@@ -15,6 +15,7 @@ public:
     bool is_destroy_ship();
     bool is_ships_destriyed();
     Ship* get_ship(int idx) const;
+    int get_ship_size(int idx) const;
 };
 
 #endif

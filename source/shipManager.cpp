@@ -42,5 +42,8 @@ bool ShipManager::is_destroy_ship() {
     return erased > 0;
 }
 
+int ShipManager::get_ship_size(int idx) const {
+    return _ships[idx]->get_size();
+}
 
 

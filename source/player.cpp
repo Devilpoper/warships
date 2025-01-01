@@ -49,17 +49,11 @@ void Player::place_ships() const {
     int x;
     int y;
     int position;
-    int answ;
-    std::cout << "Do you want randomly place ships? [1 - y/0 - n]: ";
-    std::cin >> answ;
-
-    if (answ == 1) {
-        randomly_place_ships();
-        return;
-    }
 
     for (int i = 0; i < ship_manager->size(); i++) {
-        auto ship = ship_manager->get_ship(i);
+        field->print();
+        std::cout << "Your take a ship with " << ship_manager->get_ship_size(i) << " size" << std::endl;
+        const auto ship = ship_manager->get_ship(i);
         bool state = false;
         while (!state) {
             std::cout << "Enter x coord: ";
